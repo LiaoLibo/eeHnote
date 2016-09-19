@@ -1,0 +1,1309 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a template CEPC Paper that contains suggestions and hints on
+% how to get your note in a form that minimizes the amount of work
+% needed to get it approved by the collaboration - assuming that the
+% physics is OK!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,a4paper]{cepcnote}
+%\documentclass[coverpage]{cepcnote} 
+\graphicspath{{figures/}}
+\usepackage{cepcphysics}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{mathrsfs}
+\usepackage{authblk}
+\usepackage{float}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{ Measurement of Higgs to WW at CEPC }
+%\title{A template for CEPC papers}
+\author[a]{LIAO Libo}
+\author[b]{LI Gang}
+\author[b]{RUAN Manqi}
+\author[a]{LI Kang}
+\author[a]{XU Qingjun}
+\affil[a]{Hangzhou Normal University}
+\affil[b]{Institute of High Energy Physics}
+\mail  {liaolb@ihep.ac.cn}
+%\draftversion{1.0}
+\draftversion{1.0}
+\cepcnote{CEPC\_ANA\_HIG\_2015\_XXX}
+\abstracttext{
+  
+  It's a note for Z($Z\rightarrow ee$)H($H\rightarrow WW^*$) channel analysis.
+  \begin{itemize}
+
+  \item {\bf Title:} Branch ratio measurement of Higgs to $WW^*$ at CEPC.
+
+  \item {\bf Author list:} it will be provided by the CEPC Collaboration,
+    and will be made available on their website. On the
+    front page, you should name ``The CEPC Collaboration'' as
+    author.
+
+  \item {\bf Abstract:} Based on a Monte Carlo sample with planed lumonisity of
+  	5$ab^{-1}$ at CEPC, measurement of H to $WW^*$ has been performed under full simulation.
+	In this analysis, two decay modes of $WW^*$, 
+	which are $WW^* \rightarrow l^+l^-\nu \bar{\nu}$ and $WW^* \rightarrow l \nu jj$, are studied.
+    
+  \end{itemize}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is where the document really begins
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Shorthand for \phantom to use in tables
+\newcommand{\pho}{\phantom{0}}
+\newcommand{\bslash}{\ensuremath{\backslash}}
+\newcommand{\BibTeX}{{\sc Bib\TeX}}
+
+\begin{document}
+
+\tableofcontents
+\clearpage
+
+\section{Introduction}
+
+\subsection{Brief of Higgs}
+For a standard model(SM) Higgs of 125GeV, the expected total width is around 4MeV, which is far beyond the resolution of current detector at LHC and even at the future $e^+ e^-$ machine CEPC.
+So the width of Higgs cannot be measured directly. At LHC, due to the fact that it is impossible to measure the Higgs decay inclusively, the Higgs total width cannot be determined model independently. 
+At CEPC. the advantage of recoil mass techniques make the inclusive measurement possible. 
+It measures the absolute cross section of $e^+ e^- \rightarrow ZH$, which is proportional to the square of the HZZ coupling($g^2_Z$).
+With $g^2_Z$ known, the partial width of $H \rightarrow ZZ(\Gamma_Z)$ can be given explicity. 
+Combined with another measurement of the branching ratio of $H \rightarrow ZZ(BR_Z)$, the Higgs total width$(\Gamma_Z)$ can be determined by
+
+\begin{equation}
+\Gamma_H = \frac{\Gamma_Z}{BR_Z}.
+\end{equation}
+\\
+\\
+In this approach the precision is statistically limited by the small branching ratio $BR_Z(2.7\%)$. Another method by utilizing the $H \rightarrow WW$ mode, which has a much larger branching ratio (22\%), similarly,
+\begin{equation}
+\Gamma_H = \frac{\Gamma_W}{BR_W}.
+\end{equation}
+While the determination of $\Gamma_W$ and $g_W^2$ are not trivial as in the case of $\Gamma_Z$.
+To explain the method, we first introduce four independent observables:
+\begin{eqnarray}
+Y_1 = \sigma_{ZH} = F_1\cdot g_Z^2 ,
+\end{eqnarray}
+\begin{eqnarray}
+Y_2 = \sigma_{ZH} \cdot Br(H \rightarrow b\bar{b}) = F_2 \cdot \frac{g_Z^2g_b^2}{\Gamma_H},
+\end{eqnarray}
+\begin{eqnarray}
+Y_3 = \sigma_{\nu\bar{\nu}H} \cdot Br(H \rightarrow b\bar{b}) = F_3 \cdot \frac{g_W^2g_b^2}{\Gamma_H},
+\end{eqnarray}
+\begin{eqnarray}
+Y_4 = \sigma_{ZH} \cdot Br(H \rightarrow b\bar{b}) = F_4 \cdot \frac{g_W^2g_W^2}{\Gamma_H},
+\end{eqnarray}
+where $g_Z$, $g_W$ and $g_b$ are couplings of Higgs to $ZZ$,$ WW$ and $b\bar{b}$ respectively;
+$F_1$, $F_2$, $F_3$ and $F_4$ are factors which can be calculated unambiguously. With these
+four observable the couplings and total width can be obtained as follows:\\
+$\bullet$ From the measurement of $Y_1$ we can get the coupling $g_Z = \sqrt{\frac{Y_1}{F_1}}$,\\
+$\bullet$ From the ratio $Y_2/Y_3$ we can get the coupling ratio $g_Z/g_W = \sqrt{\frac
+{Y_2F_3}{Y_3F_2}}$,\\
+$\bullet$ With $g_Z$ and $g_Z/g_W$, we can get $g_W = \sqrt{\frac{Y_1Y_3F_2}{Y_2F_1F_3}}$,\\
+$\bullet$ With $g_Z$ and $g_W$ known, from the measurement of $Y_4$ we can get the Higgs 
+total width $\Gamma_H = \frac{Y_1^2Y_3F_2F_4}{Y_2Y_4F_1^2F_3}$.\\
+\\
+In this analysis, we focus on the measurement of branching ratio $Br(H \rightarrow WW)$ with
+Higgstrahlung process, which is an essential parameter for $Y_4$. Leptonic and semi-leptonic 
+decay of $WW$ have been studied, and they are introduced separately below and finally combined 
+result is presented~\cite{wwnote}.\\
+
+\subsection{Brief of CEPC}
+With the discovery of Higgs boson at the LHC, we find the last puzzle of standard model.
+It is urgent to study the propoties of Higgs boson, so to build a electon-positron colider is appropriate.
+Based on this case, CEPC, Circle Election Positron Collider, has been proposed and designed. 
+As a Higgs factory, center-of-mass of CEPC is two times larger than Higgs mass(125\gev), 
+and its integrated luminosity is 5000$fb^{-1}$.
+Compared with LHC, the advantages of CEPC are higher integrated luminosity and cleaner environment, 
+and its potential to upgrate to SPPC, Super Proton Proton Collider, which center-of-mass is 70 - 100\tev,
+much more higher than 14\tev of LHC~\cite{precdr}.
+\\
+
+\section{Monte Carlo}
+This analysis is performed with a planed integrated luminosity of 5$ab^{-1}$. For signal
+and background events, they are full simulated by CEPC\_V1 model and reconstructed by Arbor\_KD. \\
+We product 100k signal, and then normalize in 5$ab^{-1}$.
+However, because of lack of computer resource, $ZZ$ and Single $Z$ background simulate and reconstruct only a part. 
+These background have been pre-selected in MC level. 
+
+\subsection{$eeH\rightarrow eel\nu l\nu$ pre-selection}
+Here are three conditions of filter. Fisrt one is invariant mass, which is larger than 55\gev and less than 110\gev.
+The second is recoil mass, larger than 90\gev and less than 150\gev.
+Number of leptons, the last condition, is equal four. The efficiency is shown in Tabel~\ref{tab:eehfull}.
+\begin{table}[H]
+  \begin{center}
+    \begin{tabular}{ccccc}
+      \hline \hline
+      \multicolumn{1}{c}{Background}      & \multicolumn{1}{c}{Single $W$}&\multicolumn{1}{c}{Single $Z$}
+	  &\multicolumn{1}{c}{$WW$}	&\multicolumn{1}{c}{$ZZ$}\\ 
+      \hline
+      Before pre-selection& $2.57*10^7$ & $2.37*10^7$	&  $7,74*10^7$	&  $5.17*10^6$\\
+      \hline
+      After pre-selection &  9 		 & 	67758		&  1			&  98\\
+      \hline
+      Efficiency         			&$\sim 0\%$ &   0.29\%		& $\sim 0\%$&  0.0019\%\\
+      \hline \hline
+    \end{tabular}
+   \caption[Monte Carlo purities in the single lepton sample]{Pre-selection of $ee l\nu l\nu$}
+  \label{tab:eehfull}
+ \end{center}
+\end{table}
+
+\subsection{$eeH\rightarrow eel\nu qq$ pre-selection}
+We also do a filter for semi-leptonic decay. Except for the same invariant mass and recoil mass cut,
+here are two conditions additionally.
+Number of energetic leptons is equal three, and the number of total particles is larger than five.
+The efficiency is shown in Table~\ref{tab:eehsemi}.
+\begin{table}[H]
+  \begin{center}
+    \begin{tabular}{ccccc}
+      \hline \hline
+      \multicolumn{1}{c}{Background}      & \multicolumn{1}{c}{Single $W$}&\multicolumn{1}{c}{Single $Z$}
+	  &\multicolumn{1}{c}{$WW$}	&\multicolumn{1}{c}{$ZZ$}\\ 
+      \hline
+      Before pre-selection& $2.57*10^7$ & $2.37*10^7$	&  $7,74*10^7$	&  $5.17*10^6$\\
+      \hline
+      After pre-selection &  405		 & 	66150		&  40			&  109\\
+      \hline
+      Efficiency         			&  0.0016\%  &   0.28\%		& $\sim 0\%$	&  0.0021\%\\
+      \hline \hline
+    \end{tabular}
+   \caption[Monte Carlo purities in the single lepton sample]{Pre-selection of $ee l\nu qq$}
+  \label{tab:eehsemi}
+ \end{center}
+\end{table}
+
+\section{Event selection}
+As we all known, $W$ could decay to lepton and hadron, so we can catalog the $WW*$ channel.
+Such as full-leptonic decay channel, semi-leptonic decay channel and hadronic decay channel.
+
+\subsection{Full-leptonic decay channel}
+In $WW^* \rightarrow l\nu l\nu$ channel, in order to improve the accuracy, 
+we can split this channel into three subchannel: $e\nu e\nu$, $\mu\nu\mu\nu$ and $e\nu\mu\nu$.
+Because former two subchannels are similar, we would discuss the $e\nu e\nu$ subchannel in detail.
+
+\subsubsection{analysis of $WW^* \rightarrow e^+e^-\nu\bar{\nu} $}
+In this decay mode,
+\begin{equation}
+e^+ e^- \rightarrow ZH \rightarrow e^+e^- H \rightarrow e^+e^- WW^* \rightarrow e^+e^-e^+e^- \nu\bar{\nu},
+\end{equation}
+there are four charged leptons in the final states. \\
+According to character of signal, selection criteria are summarized as below:\\
+
+\begin{itemize}   
+
+\item  CUT1: A simplest idea is there are only four tracks in signal, we can choose four leptons for signal character. 
+But why we utilize isolated condition rather than number of leptons, 
+because isolated condition can cut down lots of higgs background, just like $H\rightarrow b\bar{b}$. 
+Isolated condition will be introduced in Appendix~\ref{app:isolepcondition}. 
+And the energy of lepton is greater than 5\gev, it could neglect some electrons and positrons from photon conversion.
+In real operation, we selecte two electrons as $Z$ pole first, so there are only two isolated leptons, 
+shown in Figure~\ref{fig:nIsL}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width= 0.5\textwidth]{eeh_nIsL_ll}
+  \caption[NO. Isolated Leptons]{The distribution of the number of isolated leptons}
+  \label{fig:nIsL}
+\end{figure}
+
+\item CUT2 \& CUT3: Among these leptons, there is a pair of electrons coming from $Z$ boson. 
+If there are more than one combination of electrons in one event, 
+the one whose mass is nearest to $Z$ is selected as $Z$ candidate. 
+For signal event, the recoil mass of the $Z$ candidate should be centered at the introduced Higgs boson. 
+Two effective cuts of $80\gev < M^{e^+e^-}_{Inv} < 100\gev$ and $120\gev< M^{e^+e^-}_{Rec} < 150\gev$ 
+on invariant mass of $e^+e^-$ system and its recoil mass are applied. 
+SM background, such as $WW$ and Single $W$, could be cut down by recoil mass and invariant mass, 
+shown in Figure~\ref{fig:invandrec}.\\
+\begin{figure}[H]
+  \centering
+  \subfigure[The distribution of invariant mass of initial muon]{
+	  \includegraphics[width= 0.3\textwidth]{eeh_InvMass_ee}
+	  \label{fig:InvMass}
+  }
+  \subfigure[The distribution of recoil mass of initial muon]{
+	  \includegraphics[width= 0.3\textwidth]{eeh_RecMass_ee}
+	  \label{fig:RecMass}
+  }
+  \caption[]{The distribution of invariant mass (\ref{fig:InvMass}) and recoil mass (\ref{fig:RecMass}) of initial muon.}
+  \label{fig:invandrec}
+\end{figure}
+
+\item  CUT4: In signal, shown in Figure~\ref{fig:nRem}, 
+there are few particles after neglecting the four isolated leptons, 
+so we could utilize a remain particles cut to cut down background.\\
+\begin{figure}[H]
+  \centering
+  \includegraphics[width= 0.5\textwidth]{eeh_Rem_ee}
+  \caption[NO. Remain Particles]{The distribution of the number of remain particles}
+  \label{fig:nRem}
+\end{figure}
+
+\item CUT5: We know there are two neutrinos performanced as missing mass in signal, 
+so we could choose missing mass squrei,Figure~\ref{fig:MisMass2}, as a cut.\\
+\begin{figure}[H]
+\centering
+\includegraphics[width= 0.5\textwidth]{eeh_MisMass_ee}
+\caption[Missing Mass Squre]{The distribution of the missing mass squre}
+\label{fig:MisMass2}
+\end{figure}
+
+\item CUT6: There are a good cut which may measure the selfcoupling indirectly.
+First, we should boost the four momentums of $e^+e^-$ coming from $W$ into Higgs' centre of mass system.
+Then, we could know the angle between these two leptons, Figure~\ref{fig:HDAngle};
+\begin{figure}[H]
+\centering
+\includegraphics[width= 0.5\textwidth]{eeh_HDAngle_ee}
+\caption[Angle in Higgs coms.]{The distribution of the lepton angle in Higgs c.o.m.s.}
+\label{fig:HDAngle}
+\end{figure}
+
+\item CUT7: In Single Boson background, main process is t-channel, so we can distinguish the signal and background 
+by total $P_{T}$, Figure~\ref{fig:TotalPt}
+\begin{figure}[H]
+\centering
+\includegraphics[width =0.5\textwidth]{eeh_Pt_ee}
+\caption[Total $P_{T}$]{The distribution of the total $P_{T}$}
+\label{fig:TotalPt}
+\end{figure}
+
+\item CUT8: Because the electrons from initial $Z$ are more energetic, the angle between them is smaller than 
+Standard Model background, shown in Figure~\ref{CosZ}
+\begin{figure}[H]
+\centering
+\includegraphics[width =0.5\textwidth]{eeh_ZTheta_ee}
+\caption[CosTheta of Z]{The distribution of electrons from initial Z}
+\label{CosZ}
+\end{figure}
+
+\item  CUT9: Shown in Figure~\ref{fig:eed0z0}, this is a vertex cut, and it's powerful to cut down long life particles decay, 
+ such as $\tau$ decay. The function we chose is
+ \begin{equation*}
+ \sqrt{(\frac{D0_1}{sigD0_1})^2+(\frac{Z0_1}{sigZ0_1})^2+(\frac{D0_2}{sigD0_2})^2+(\frac{Z0_2}{sigZ0_2})^2},
+ \end{equation*}
+ the subscript number means different particles. \\
+\begin{figure}[H]
+\centering
+\includegraphics[width= 0.5\textwidth]{eeh_Vertex_ee}
+\caption[Vertex of ee channel]{The distribution of vertex position in $ee$ final state}
+\label{fig:eed0z0}
+\end{figure}
+
+\item CUT10: If the final state electrons come from $Z$, the invariant mass should be near 91.2\gev.
+We can utilize this to distinguish the signal and background, in Figure~\ref{fig:llInvMass}.
+\begin{figure}[H]
+\centering
+\includegraphics[width= 0.5\textwidth]{eeh_llInvMass_ee}
+\caption[Invariant Mass of two electrons]{The distribution of the invariant mass of two leptons from $WW^*$}
+\label{fig:llInvMass}
+\end{figure}
+
+\end{itemize}
+
+After these cuts, we reject the most background, in Table~\ref{tab:eeCutchain}.
+\begin{table}[H]
+  \begin{center}
+    \begin{tabular}{cccc}
+      \hline \hline
+      \multicolumn{1}{c}{Category}      & \multicolumn{1}{c}{Signal}&\multicolumn{1}{c}{$ZH$}&\multicolumn{1}{c}{Single $Z$}\\ 
+      \hline
+      Total		       	 									&      91  	& 37825	&  67758\\
+      $N_{ZPole}=2; N_{Isolep}=2; l_1 = e, l_2 = e$	 		&     60    &   149	& 18179\\
+      $80\gev < M_{Inv}^{e^+e^-} < 100\gev$         		&     55    &   122	& 	10795\\
+	  $120\gev < M_{Rec}^{e^+e^-} < 150\gev$        		&     48    &   115	& 	5045\\
+	  $N_{Remain} < 4$										&	  46	&	71	& 	4873\\
+	  $100\gev < M_{Mis}^{2} < 6000\gev$		        	&     42    &   37  & 	1555\\
+	  $Cos\theta_{ee} > -0.2$			        			&     38    &   26	& 	776\\
+	  $P_{T} > 20\gev$										&	  31	&	19	& 	67\\
+	  $Cos\theta_{(ee of Z)} < 0.7$							&     24    &   14  &   36\\
+	  $\sqrt{(\frac{D0}{sigD0})^2+(\frac{Z0}{sigZ0})^2} < 11$&    22    &   1   &   21\\
+	  $M_{Inv}^{ee} < 60\gev$								&     22    &   1   &   14\\
+      \hline \hline
+    \end{tabular}
+   \caption[Monte Carlo purities in the single lepton sample]{Cut chain of $ee ee$ final state}
+  \label{tab:eeCutchain}
+ \end{center}
+\end{table}
+
+\subsubsection{Analysis of $WW^*\rightarrow \mu^+\mu^-\nu\bar{\nu}$}
+This subchannel is similar with $e^+e^-\nu\bar{\nu}$ subchannel, so we will ignore the process of analysis.
+Cutchain is in Table~\ref{tab:uucutchain}
+\begin{table}[H]
+  \begin{center}
+    \begin{tabular}{cccc}
+      \hline \hline
+      \multicolumn{1}{c}{Category}      & \multicolumn{1}{c}{Signal}&\multicolumn{1}{c}{$ZH$}&\multicolumn{1}{c}{Single $Z$}\\ 
+      \hline
+      Total		       	 									& 82	& 37825	& 67758\\
+      $N_{ZPole}=2; N_{Isolep}=2; l_1 = \mu, l_2 = \mu$	 	& 63	& 175	& 4674\\
+      $80\gev < M_{Inv}^{e^+e^-} < 100\gev$         		& 53	& 129	& 2340\\
+	  $120\gev < M_{Rec}^{e^+e^-} < 150\gev$        		& 51	& 121	& 748\\
+	  $N_{Remain} < 5$										& 51	& 71	& 729\\
+	  $0\gev < M_{Mis}^{2} < 6000\gev$			        	& 50	& 41	& 471\\
+	  $\sqrt{(\frac{D0}{sigD0})^2+(\frac{Z0}{sigZ0})^2} < 5$& 50	& 19	& 441\\
+	  $10\gev < M_{Inv}^{ee} < 60\gev$						& 49	& 6		& 115\\
+	  $P_{T} > 10\gev$										& 48	& 6		& 45\\
+	  $Cos\theta_{(ee of Z)} < 0.9$							& 44	& 2		&  26\\
+      \hline \hline
+    \end{tabular}
+   \caption[Monte Carlo purities in the single lepton sample]{Cut chain of $ee \mu\mu$ final state}
+  \label{tab:uucutchain}
+ \end{center}
+\end{table}
+
+\subsubsection{Analysis of $WW^*\rightarrow e\mu\nu\bar{\nu}$}
+It's a special subchannel with different lepton flavor. 
+Background will be rejected by different flavor effectively.
+Because of this, the cuts we used are less than the other two subchannel.
+The cutchain is Table~\ref{tab:eucutchain}
+\begin{table}[H]
+  \begin{center}
+    \begin{tabular}{cccc}
+      \hline \hline
+      \multicolumn{1}{c}{Category}      & \multicolumn{1}{c}{Signal}&\multicolumn{1}{c}{$ZH$}&\multicolumn{1}{c}{Single $Z$}\\ 
+      \hline
+      Total		       	 									&  178	& 37825	& 67758\\
+      $N_{ZPole}=2; N_{Isolep}=2; l_1 = e, l_2 = \mu$	 	&  124	& 197	& 1069\\
+      $80\gev < M_{Inv}^{e^+e^-} < 100\gev$         		&  106	& 147	& 585\\
+	  $120\gev < M_{Rec}^{e^+e^-} < 150\gev$        		&  98 	& 139	& 188\\
+	  $N_{Remain} < 4$										&  97	& 106	& 172\\
+	  $0\gev < M_{Mis}^{2} < 5500\gev$		        		&  93 	& 49 	& 72\\
+	  $\sqrt{(\frac{D0}{sigD0})^2+(\frac{Z0}{sigZ0})^2} < 5$&  81 	& 8		& 8\\
+      \hline \hline
+    \end{tabular}
+   \caption[Monte Carlo purities in the single lepton sample]{Cut chain of $ee e\mu$ final state}
+  \label{tab:eucutchain}
+ \end{center}
+\end{table}
+
+\subsection{Semi-leptonic decay channel}
+In this channel, we can find three isolated leptons and two jets, 
+so the full-leptonic decay and hadronic decay of Standard Model background would be rejected powerfully.
+\subsubsection{Analysis of $WW^*\rightarrow \mu\nu qq$}
+In this subchannel, two electrons, one muon and two jets would be found.
+\begin{itemize}
+\item CUT1: Figure~\ref{fig:seminIsL}, it's the number of isolated leptons cut.
+\begin{figure}[H]
+\centering
+\includegraphics[width= 0.5\textwidth]{eeh_nIsL_lv}
+\caption[NO. Isolated Leptons in semi-leptonic decay]{The distribution of the number of isolated leptons 
+		in semi-leptonic decay}
+\label{fig:seminIsL}
+\end{figure}
+
+\item CUT2 \& CUT3: Here are invariant mass and recoil mass cut, just like full-leptonic decay.
+Among these leptons, there is a pair of electrons coming from $Z$ boson. 
+If there are more than one combination of electrons in one event, 
+the one whose mass is nearest to $Z$ is selected as $Z$ candidate. 
+For signal event, the recoil mass of the $Z$ candidate should be centered at the introduced Higgs boson. 
+Two effective cuts of $80\gev < M^{e^+e^-}_{Inv} < 100\gev$ and $120\gev< M^{e^+e^-}_{Rec} < 150\gev$ 
+on invariant mass of $e^+e^-$ system and its recoil mass are applied. 
+SM background, such as $WW$ and Single $W$, could be cut down by recoil mass and invariant mass, 
+shown in Figure~\ref{fig:semiinvandrec}.\\
+\begin{figure}[H]
+  \centering
+  \subfigure[The distribution of invariant mass of initial muon]{
+	  \includegraphics[width= 0.3\textwidth]{eeh_InvMass_u}
+	  \label{fig:semiInvMass}
+  }
+  \subfigure[The distribution of recoil mass of initial muon]{
+	  \includegraphics[width= 0.3\textwidth]{eeh_RecMass_u}
+	  \label{fig:semiRecMass}
+  }
+  \caption[]{The distribution of invariant mass (\ref{fig:semiInvMass}) and 
+  recoil mass (\ref{fig:semiRecMass}) of initial muon.}
+  \label{fig:semiinvandrec}
+\end{figure}
+
+\item CUT4: No. Remain Particles, Figure~\ref{fig:seminrem}, is used for rejected $\tau$ jet and B meson.
+\begin{figure}[H]
+\centering
+\includegraphics[width =0.5\textwidth]{eeh_Rem_u}
+\caption[]{The distribution of No. Remain Particles}
+\label{fig:seminrem}
+\end{figure}
+
+\item CUT5: In this subchannel, di-jet invariant mass, Figure~\ref{fig:semidijetinvmass}, is a good cut, 
+and it would show the resolution of jet energy clearly.
+\begin{figure}[H]
+\centering
+\includegraphics[width =0.5\textwidth]{eeh_diJet_InvMass_u}
+\caption[]{The distribution of di-jet invariant mass}
+\label{fig:semidijetinvmass}
+\end{figure}
+
+\item CUT6: We know that $W$ boson would not decay to b jet, so the Btag, shown in Figure~\ref{fig:semiBtag},
+would reject a lot of b jet background. Because here are two jets, we plus the Btag value of both.
+\begin{figure}[H]
+\centering
+\includegraphics[width =0.5\textwidth]{eeh_Btag_u}
+\caption[]{The distribution of Btag}
+\label{fig:semiBtag}
+\end{figure}
+
+\item CUT7: Because of two neutrinoes in signal, we could see the missing mass, 
+and missing mass squre could reject some $\tau$ events.
+\begin{figure}[H]
+\centering
+\includegraphics[width =0.5\textwidth]{eeh_MisMass_u}
+\caption[]{The distribution of Missing Mass Squre}
+\label{fig:semiMM2}
+\end{figure}
+
+\item CUT8: The main background is $\tau$ events or b jet events, 
+so the impact parameter is a very powerful cut, shown in Figure~\ref{fig:semid0z0}.
+The function of impact parameter is 
+$\sqrt{\frac{D0^2}{sigD0^2}+\frac{Z0^2}{sigZ0^2}}$.
+\begin{figure}[H]
+\centering
+\includegraphics[width =0.5\textwidth]{eeh_Vertex_u}
+\caption[]{The distribution of Impact Parameter}
+\label{fig:semid0z0}
+\end{figure}
+
+\end{itemize}
+
+The cut chain is here, Table~\ref{tab:semiuvqq}
+\begin{table}[H]
+  \begin{center}
+    \begin{tabular}{ccccc}
+      \hline \hline
+      \multicolumn{1}{c}{Category}      & \multicolumn{1}{c}{Signal}&\multicolumn{1}{c}{$ZH$}&\multicolumn{1}{c}{$ZZ$}&\multicolumn{1}{c}{Single $Z$}\\ 
+      \hline
+      Total 	      	 									&   1221	& 35773	&	109	& 66150\\
+      $N_{ZPole}=2; N_{Isolep}=1; N_{Jets} =2; l = \mu$		&   1048	& 1195	&	33	& 10065\\
+      $80\gev/c^2 < M_{Inv}^{e^+e^-} < 100\gev/c^2$    		&   782		& 1447	&	10	& 4901\\
+	  $120\gev/c^2 < M_{Rec}^{e^+e^-} < 150\gev/c^2$   		&   751 	& 1394	&	6	& 1331\\
+	  $7 < N_{Remain} < 30$									&	722		& 705	& 	1	& 328\\
+	  $15\gev/c^2 < M_{Rec}^{di-Jet} < 95\gev/c^2 $			&	693		& 274	&	1	& 200\\
+	  $Btag < 1$											&	689		& 147	& 	1	& 81\\
+	  $M_{Missing}^2 < 3000\gev^2/c^4$						&   686		& 104	&	1	& 68\\
+	  $\sqrt{(\frac{D0}{sigD0})^2+(\frac{Z0}{sigZ0})^2} < 5$&	684  	&  28 	&	1	& 20\\
+      \hline \hline
+    \end{tabular}
+  \caption[Monte Carlo purities in the single lepton sample]{% Monte
+    Cut chain of semi leptonic decay of $H\rightarrow WW^* \rightarrow \mu\nu qq$}
+  \label{tab:semiuvqq}
+  \end{center}
+\end{table}
+
+\subsubsection{Analysis of $WW^*\rightarrow e\nu qq$}
+Compared to $\mu\nu qq$ subchannel, the resolution of energy and impact parameter of this subchannel are worse,
+and we consider another cut, Figure~\ref{fig:semideltaE}.
+\begin{figure}[H]
+\centering
+\includegraphics[width =0.5\textwidth]{eeh_deltaE_e}
+\caption[]{The distribution of delta energy of di-jet}
+\label{fig:semideltaE}
+\end{figure}
+
+The cut chain is Table~\ref{tab:semievqq}
+\begin{table}[H]
+  \begin{center}
+    \begin{tabular}{ccccc}
+      \hline \hline
+      \multicolumn{1}{c}{Category}      & \multicolumn{1}{c}{Signal}&\multicolumn{1}{c}{$ZH$}&\multicolumn{1}{c}{$ZZ$}&\multicolumn{1}{c}{Single $Z$}\\ 
+      \hline
+      Total 	      	 									&   1182	& 35773	&	109	& 66150\\
+      $N_{ZPole}=2; N_{Isolep}=1; N_{Jets} =2; l = e$		&   916		& 1450	&	11	& 7965\\
+      $80\gev/c^2 < M_{Inv}^{e^+e^-} < 100\gev/c^2$    		&   728		& 947	&	4	& 4032\\
+	  $120\gev/c^2 < M_{Rec}^{e^+e^-} < 150\gev/c^2$   		&   687 	& 879	&	2	& 1386\\
+	  $7 < N_{Remain} < 30$									&	657		& 350	& 	1	& 374\\
+	  $10\gev/c^2 < M_{Rec}^{di-Jet} < 85\gev/c^2 $			&	630		& 184	&	1	& 274\\
+	  $Btag < 1$											&	628		& 132	& 	1	& 142\\
+	  $M_{Missing}^2 < 4000\gev^2/c^4$						&   626		& 101	&	1	& 137\\
+	  $\sqrt{(\frac{D0}{sigD0})^2+(\frac{Z0}{sigZ0})^2} < 40$&  617   	&  85 	&	1	& 130\\
+	  $|\delta E_{Jets}| <60\gev$							&	612		&  75	&	1	& 112\\
+      \hline \hline
+    \end{tabular}
+  \caption[Monte Carlo purities in the single lepton sample]{% Monte
+    Cut chain of semi leptonic decay of $H\rightarrow WW^* \rightarrow e\nu qq$}
+  \label{tab:semievqq}
+  \end{center}
+\end{table}
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Data characteristics
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\section{Data characteristics}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% nn qqqq %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{table}[H]
+%  \begin{center}
+%    \begin{tabular}{cccccccc}
+%      \hline \hline
+%      \multicolumn{1}{c}{Category}      & \multicolumn{1}{c}{Signal}&\multicolumn{1}{c}{$ZH$}&\multicolumn{1}{c}{$ZZ$}&\multicolumn{1}{c}{$ZZorWW$}&\multicolumn{1}{c}{$WW$}&\multicolumn{1}{c}{Single $W$}&\multicolumn{1}{c}{Single $Z\nu$}\\ 
+%      \hline
+%      Total 	      	 					&   24030& 218440&	1013884	&   865307 &   1445826 &   1847106 & 733236\\
+%      $20\gev < P_{T}^{Tot} < 80\gev$		&   21933& 191195&	879206	&   835961 &   1386878 &   1776319 & 654859\\
+%      $50\gev < \Sigma|P_{T}| < 150\gev$	&   21912& 180913&	815996	&   544372 &   1099261 &   1343993 & 579238\\
+%	  $85\gev < M_{Missing} < 150\gev$  	&   20410& 159904&	682296	&   372075 &   865453  &   1034089 & 486289\\
+%	  $N_{Particle}^{Tot} > 20$				&	20063& 137649& 	441058	&   101	   &   126072  &   5103	   & 299649\\
+%	  $Btag < 1$							&	19699& 34131 & 	316551	&   85     &   121262  &   4965	   & 219638\\
+%	  $Cos\theta_{2jets} > 0.85  $			&	19680& 33402 &	233443	&   81     &   102515  &   3937	   & 165188\\
+%	  $\Sigma|M_{Inv}^{2jet}| > 40\gev$		&   19511& 22438 &	82622	&   3	   &   84815   &   3357	   & 57633 \\
+%	  Combined Variable						&	13549& 9541  &	13398	&   2	   &   24033   &   850	   & 8033  \\
+%	  Stat.									&56.38\% & 4.37\%&	1.32\%	&   0\%	   &   1.66\%  &   0.05\%  & 1.10\%\\
+%      \hline \hline
+%    \end{tabular}
+%  \caption[Monte Carlo purities in the single lepton sample]{% Monte
+%    Cutchain of hadronic decay of $H\rightarrow WW^* \rightarrow qqqq$}
+%  \label{tab:semi}
+%  \end{center}
+%\end{table}
+
+%\subsection{Figures}
+
+%The Publication Committee has a root macro to create figures in
+%CEPC style, it can be found on the PubComm web pages.
+%Use this style consistently throughout the paper.
+%An example figure can be seen in Figure~\ref{fig:example}. 
+
+%Figures should be always made available in both {\tt eps} and {\tt
+%  png} format. Additionally, a {\tt pdf} version of the plots can be
+%useful in case \verb|pdflatex| is used to produce a publication.
+%%Colour versions are appropriate for talks, and black-and-white
+%%versions are necessary for the publication itself.
+%
+%All figures appearing in the paper must be mentioned in the text.
+%The figures should appear in the same order as mentioned in the text.
+%At the beginning of a sentence, use the full word ``Figure''.
+%Within a sentence, the abbreviation ``Fig.'' may be used.
+%If a figure appears in two or more parts, refer to it as
+%``Fig. 1(a)'' and ``Fig. 1(b)''. Both ``(a)'' and ``(b)'' should
+%appear in the text, in the figure, and in the caption.
+%The word ``CEPC'' (or ``CEPC Preliminary'', if appropriate) should
+%appear prominently somewhere in the figure. This becomes important when
+%the figure is copied and shown out of context. If appropriate, it
+%is useful to include information about the luminosity corresponding
+%to a figure.
+%
+%All axes must be labeled, including units (i.e. ``Energy [\gev]'').
+%The vertical axis units should specify the bin width, unless
+%arbitrarily normalized. A legend box explaining all plotting symbols
+%must appear somewhere in the figure.
+%
+%The caption should be placed below the figure.  All lines, all
+%plotting symbols, and all variables used in the figure must be defined
+%in the caption. Do not refer to any characteristic that is not
+%distinguishable in black-and-white.  If relevant, the normalization
+%method of the plot should be specified.
+
+%A figure with subfigures can be made as shown in the example of
+%Figure~\ref{fig:subfigexample}.
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Systematic uncertainties
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\section{Systematic uncertainties}
+
+%Give a detailed list of systematic uncertainties, the method
+%by which they were obtained, and a justification of the resulting
+%values.
+%%
+%Use ``systematic uncertainty'' instead of ``systematic errors''.
+%The latter sounds as if you have made a mistake systematically.
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\section{Results}
+After event selection, we can get the number of signal and background, 
+and we can also get the information of reconstruction efficiency, 
+like Table~\ref{tab:efficiency}
+\begin{table}[H]
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+      \hline \hline
+      \multirow{2}{*}{Subchannel}& \multirow{2}{*}{Yield}&\multirow{2}{*}{Objects}&\multicolumn{2}{c|}{Event After Selection}\\ 
+	  \cline{4-5}
+	  						&			&		& Signel&Background\\
+      \hline
+      $e\nu e\nu$ 	    	&   91		& 62(68\%)	&	22(19\%)	& 16\\
+      $\mu\nu\mu\nu$		&   82		& 63(77\%)	&	44(54\%)	& 24\\
+      $e\nu\mu\nu$    		&   178		& 132(74\%)	&	82(46\%)	& 25\\
+	  $e\nu qq$   			&   1182 	& 1041(80\%)&	612(52\%)	& 188\\
+	  $\mu\nu qq$			&	1221	& 1194(80\%)& 	684(56\%)	& 49\\
+      \hline \hline
+    \end{tabular}
+  \caption[Monte Carlo purities in the single lepton sample]{% Monte
+    Summery of each subchannel of $ZH\rightarrow eeWW^*$}
+  \label{tab:efficiency}
+  \end{center}
+\end{table}
+
+Relative error of $H\rightarrow WW^*\rightarrow ll\nu\bar{\nu} (l = e,\mu)$ and 
+$H\rightarrow WW^*\rightarrow l\nu qq (l = e,\mu)$ is shown in Table~\ref{tab:fullstatistic}.
+
+\begin{table}[H]
+  \begin{center}
+    \begin{tabular}{cr@{$\pm$}lc}
+      \hline \hline
+      Category      &\multicolumn{2}{c}{Signal}& \multicolumn{1}{c}{Relative Error}\\ 
+      \hline
+      $Z\rightarrow ee; H\rightarrow WW^*\rightarrow e\nu\mu\nu		$	&82    &11	&13.4\% \\
+      $Z\rightarrow ee; H\rightarrow WW^*\rightarrow e\nu e\nu		$	&22    &7	&31.8\%\\
+      $Z\rightarrow ee; H\rightarrow WW^*\rightarrow \mu\nu\mu\nu	$	&44    &9	&20.5\%	\\ 
+	  $Z\rightarrow ee; H\rightarrow WW^*\rightarrow \mu\nu qq		$	&684   &28	&4.1\%    \\
+	  $Z\rightarrow ee; H\rightarrow WW^*\rightarrow e\nu qq		$	&612   &29	&4.7\%    \\
+      \hline \hline
+    \end{tabular}
+  \caption{Statistic error of Signal and Relative error}
+  \label{tab:fullstatistic}
+  \end{center}
+\end{table}
+
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Discussion
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\section{Discussion}
+%
+%Put the results into the context of the theory or a model.
+%%
+%If the results lead to exclusion plots, make sure that it is clear 
+%which region on the plot is excluded.
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Summary and conclusion
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\section{Summary and conclusion}
+In $WW^* \rightarrow ll\nu\bar{\nu}$ channel, we can get 7.38\% relative error.
+%It's better then Mr. CHEN Zhenxing's result. 
+And combined $WW^* \rightarrow l\nu qq$ channel, we would get a higher accuracy.
+%Reiterate the main points of the paper and the primary results and
+%conclusions.
+%
+%Note that many readers look mostly at the title, abstract and
+%conclusion. The conclusion should be interesting enough to
+%make them want to read the whole paper.
+%It is not good style to just repeat the abstract.
+%
+%If your paper is short and only has one result quoted at the end of
+%the paper, then you should consider whether conclusions are
+%necessary. 
+%
+%Try not to end your conclusions with a sentence such as
+%``All the results in this paper are in good agreement with the
+%Standard Model, the current world average and recent
+%measurements by other experiments''. This might lead a referee
+%(internal or external) to wonder why it is worth publishing this
+%paper!
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Acknowledgements
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Acknowledgements}
+
+%A standard template for the acknowledgements is available on the
+%web pages of the Publication Committee.
+Thanks Dr. LI Gang and Dr. RUAN Manqi greatly for their guidance and their constructive arguements.
+And thanks my colleagues, Mr. CHEN Zhenxing and Mr. WEI Yuqian who build a good basement for me, 
+Dr. MA Bingsong and Dr. MO Xin who are engaged in generator, simulation and reconstruction of samples, 
+Dr. WANG Feng who help me solve some technical problems.
+%See reference~\cite{publication_policy} for the URL. 
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Rules for referencing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\section{Rules for referencing}
+%
+%Use \BibTeX{} for the references. See Appendix~\ref{app:References}
+%for an explanation.
+%
+%Only cite permanent, publicly available, or CEPC approved references.
+%Private references, not available to the general public, should be
+%avoided. Caution should be used when referring to CEPC notes.
+%Only reference approved notes. Do not reference COM or INT notes,
+%as these are not available outside CEPC.
+%
+%Whenever possible, cite the article's journal rather than its
+%preprint number. If desired, the hep-ex number can be given in
+%addition. Always double check references when copying them from
+%another source.
+%
+%Referencing styles are journal-dependent. See the CEPC Publication
+%Policy document for more information.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{cepcBibStyleWoTitle}
+\bibliography{instructions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Technical Aspects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\appendix
+\part*{Appendices}
+\addcontentsline{toc}{part}{Appendices}
+
+%Use the Appendices to include all the technical details of your work
+%that are relevant for the CEPC Collaboration only (e.g. datases
+%details, software release used). The Appendices can be removed from
+%an CEPC Internal Note becoming an CEPC Public Note.
+%
+%Use the following commands to start the Appendices section:
+%\begin{verbatim}
+%   \newpage
+%   \appendix
+%   \part*{Appendices}
+%   \addcontentsline{toc}{part}{Appendices}
+%\end{verbatim}
+
+\section{Isolated leptons' condition}
+\label{app:isolepcondition}
+Isolated leptons tagging is a key in $WW^*$ analysis, espcially in jets environment, so a good iaolated leptons algorithm
+could decide our analysis accuracy. We will introduce the isolated leptons algorithm below:\\
+There are two key conditions. The first one is lepton identification that a good PFA could help us.
+The second is isolated conditions, cone angle of lepton and the ratio of energy in cone angle and lepton's energy, 
+shown in Table~\ref{tab:isolep}.
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{cccccc}
+\hline \hline
+\multirow{2}{*}{$E_{lepton}$} & \multirow{2}{*}{Leptons' flavor} 	& \multicolumn{2}{c}{Full-leptonic Decay} 
+& \multicolumn{2}{c}{Semi-leptonic Decay}\\
+							&									&Cone Angle[rad]&$E_{Cone}/E_{Lepton}$
+							&Cone Angle[rad]&$E_{Cone}/E_{Lepton}$\\
+\hline
+\multirow{2}{*}{$5\gev-10\gev$}	&			Muon					&0.15		&0.25		&0.15		&0.7	\\
+							&			Electron				&0.3		&1.1		&0.3		&0.9	\\
+\hline
+\multirow{2}{*}{$10\gev-15\gev$}	&			Muon					&0.15		&0.35		&0.15		&0.25	\\
+							&			Electron				&0.3		&0.75		&0.3		&0.75	\\
+\hline
+\multirow{2}{*}{$>15\gev$}	&			Muon					&0.15		&0.3		&0.15		&0.25	\\
+							&			Electron				&0.25		&0.55		&0.25		&0.6	\\
+\hline \hline
+\end{tabular}
+\caption{Isolated lepton condition}
+\label{tab:isolep}
+\end{center}
+\end{table}
+%\section{The {\tt cepcnote} class}
+%\label{app:CepcNoteCls}
+%
+%This paper has been typeset using the {\tt cepcnote.cls} class, that
+%implement the CEPC template can be used for papers, preprints,
+%notes. The {\tt cepcnote} class is available on web pages of the
+%Publication Committee, as well as this instruction paper and the
+%related files.
+%
+%{\tt cepcnote.cls} derives from the standard \LaTeX{} {article.cls}
+%class, thus all the usual commands and options you would have used
+%with {\tt article} will work with it. For instance, this paper has
+%been produced using this very simple preamble:
+%
+%\begin{verbatim}
+%  \documentclass[11pt,a4paper]{cepcnote}
+%  \graphicspath{{figures/}}
+%  \usepackage{cepcphysics}
+%  \usepackage{subfigure}
+%\end{verbatim}
+%
+%\subsection{Dependencies}
+%
+%The {\tt cepcnote} class depends on these packages, which presence in
+%your system is required:
+%\begin{itemize}
+%  \item {\tt graphicx}
+%  \item {\tt mathptmx}
+%  \item {\tt lineno}
+%\end{itemize}
+%The first two are all usually already installed in any modern \LaTeX{}
+%installation, while the latter is part of the {\tt ednotes} package
+%bundle and is direclty provided with this package; {\tt cepcnote} was
+%tested on a IHEP {\tt lxslc} login node and worked out of the box. The {\tt
+%  cepcnote} class works both with \LaTeX{} and pdf\LaTeX{}.
+%
+%If you wish to use the {\tt cepccover} package with the {\tt
+%  cepcnote} class, load the latest version of the package in your
+%system, and invoke it using the {\tt coverpage} option of the class:
+%\begin{verbatim}
+%  \documentclass[11pt,a4paper,coverpage]{cepcnote}
+%\end{verbatim}
+%instead of the the usual {\tt usepackage} command: this will ensure
+%that the cover page is produced before the note title page.
+%
+%\subsection{Custom commands}
+%
+%The {\tt cepcnote} class implements some custom commands, mainly
+%used to typeset the frontpage content:
+%
+%\begin{itemize}
+%
+%  \item {\verb|\title{<Title>}|} typesets the paper title. If not
+%    given, a dummy \emph{Title goes here} title will be produced.
+%
+%  \item {\verb|\author{<Author>}|} typesets the paper author. If not
+%    explicitly given, \emph{The CEPC Collaborations} will be used by
+%    default. Note that the \verb|\author{}| command is pretty limited
+%    in case you want to display multiple author names and multiple
+%    affiliations. For this use case the \verb|authblk.sty| package is
+%    provided; this is a typical example of its use:
+%    \begin{verbatim}
+%\usepackage{authblk}
+%\renewcommand\Authands{, } % avoid ``. and'' for last author
+%\renewcommand\Affilfont{\itshape\small} % affiliation formatting
+%
+%\author[a]{First Author}
+%\author[a]{Second Author}
+%\author[b]{Third Author}
+%
+%\affil[a]{One Institution}
+%\affil[b]{Another Institution}
+%    \end{verbatim}
+%  \item {\verb|\mail{<Mail address>}|} typesets only one E-mail address in the foot note.
+%
+%  \item {\verb|\abstracttext{<The abstract text>}|} typesets the
+%    abstract in the front page.
+%
+%  \item {\verb|\date{<Date>}|} typesets the paper date. If not
+%    explicitly given, the current date (\verb|\today|) will be used.
+%
+%  \item {\verb|\draftversion{<Draft Version>}|} displays the draft
+%    version on the front page, a DRAFT banner on all the other page
+%    headings, and add line numbers to all text to easy commenting abd
+%    reviewing. Can be omitted.
+%
+%  \item {\verb|\journal{<Journal Name>}|} displays the phrase \emph{to
+%    be submitted to Journal Name} at the bottom of the front page. Can
+%    be omitted.
+%
+%  \item {\verb|\skipbeforetitle{<lenght>}|} sets the distance between
+%    the title page header and the note title. The default value should
+%    be fine for most notes, but in case you have a long list of
+%    authors or a lenghtly abstract you can use this command to buy
+%    some extra space. Note that \verb|<lenght>| can also be negative
+%    (use it at your own risk!).
+%
+%\end{itemize}
+%
+%\noindent {\tt emptynote.tex} contains a basic skeleton that can be
+%used to start typing a new note using the {\tt cepcnote} class. All
+%the custom commands described above are used in this example file, in
+%order to demonstrate their use.
+
+%\section{Bibliography}
+%\label{app:References}
+
+%We recommend to use \BibTeX{} for the references. Although it often
+%appears harder to use at the beginning, it means that the number of
+%typos should be reduced significantly and the format of the references
+%will be correct, without you having to worry about formatting it. In
+%addition the order of the references is automatically correct.
+%
+%A file with the extension {\tt .bib} (in this example: {\tt
+%instruction.bib}) should contain all the references. This file may
+%also contain references that you do not use, so it may act like a
+%library of references. The typical compilation cycle when using
+%\BibTeX{} looks like the following:
+%%
+%\begin{verbatim}
+%  (pdf)latex instructions
+%  bibtex instructions
+%  (pdf)latex instructions
+%  (pdf)latex instructions
+%\end{verbatim}
+%%
+%\BibTeX{} will create a file with the extension {\tt .bbl}, which will
+%contain the actual references used, and \LaTeX{} will then take care
+%to include them in your paper. Note that only after the third run of
+%\LaTeX{} will all references be correct. Unless you change a reference
+%you do not have to do the {\tt bibtex} step again.
+%
+%A \BibTeX{} style file ({\tt cepcBibStyleWoTitle.bst}) is provided with the
+%CEPC template. You can use it in your text source file like in the
+%following:
+%%
+%\begin{verbatim}
+%  \bibliographystyle{cepcBibStyleWoTitle}
+%  \bibliography{instructions}
+%\end{verbatim}
+%%
+%
+%{\color{red} \textbf{Important}:} for further information on \BibTeX{} and on the standard CEPC style for referencing, look at the ``{\tt QuickGuide\_BIBTEX}" file shipped with this package.
+%
+%
+%\section{Miscellaneous \LaTeX{} tips}
+%\label{app:LatexTips}
+%
+%\subsection{Graphics}
+%
+%Use the {\tt graphicx} package \cite{} to include your plots and
+%figure. The use of older packages like {\tt espfig} is deprecated.
+%Since the {\tt graphicx} package is required by the {\tt cepcnote}
+%class, it is automatically loaded when using it, and there is no need
+%to explicitly included it in the document preamble.
+%
+%Always include your graphics file without metioning the file
+%extension. Fior inctance, if you want to include the {\tt figure.eps}
+%file, you should use a sysntax like this:
+%\begin{verbatim}
+%  \includegraphics[width=\textwidth]{figure}
+%\end{verbatim}
+%This will allow to compile your document using either \LaTeX{} or
+%pdf\LaTeX{} without changing your source file: you can in fact have
+%both {\tt figure.eps} and {\tt figure.pdf} in your working directorym
+%and the proper one will be picked up according to the processing method
+%you chose.
+%
+%It is a good habit to keep you graphics file in a separated
+%sub-directory (e.g. in {\tt figure/}. In this case you can include them
+%by mentioning it explicitly every time:
+%\begin{verbatim}
+%  \includegraphics[width=\textwidth]{figures/figure}
+%\end{verbatim}
+%or by telling once for all to the {\tt graphicx} package where to look
+%for them, by using this command:
+%\begin{verbatim}
+%  \graphicspath{{figures/}}
+%\end{verbatim}
+%
+%
+%\subsection{Definitions}
+%
+%You can use \verb|\ensuremath| in definitions, so that they will work
+%in both text mode and math mode, e.g.
+%\verb|\newcommand{\UoneS}{\ensuremath{\Upsilon(\mathrm{1S})}}| to get
+%\UoneS{} in either mode (\verb|\UoneS{}| or \verb|$\UoneS$|).
+%
+%\subsection{Emphasis}
+%
+%Use italics for emphasis sparingly: too many italicized words defeat
+%their purpose. When you do italicize a word, really italicize it: do
+%not use math mode! Note the difference between \emph{per se}
+%(\verb|\emph{per se}|) and $per se$ (\verb+$per se$+). Abbreviations
+%like i.e., e.g., etc., and et al. should \emph{not} be italicized!
+%For program names we recommend to use small capitals:
+%\verb|{\sc Pythia}}| produces {\sc Pythia}.
+%
+%\section{General Style}
+%
+%We recommend the use of British English. However, whatever you decide
+%to choose, be consistent throughout the paper. For much more detailed
+%information on writing, spelling and typographic style, etc. please
+%see the CEPC Style Guide \cite{}. The CEPC Publication Policy
+%contains a list of CEPC detector acronyms. Standard ways to write
+%these are in the CEPC Glossary.
+%
+%\section{The {\tt cepcphysics.sty} style file}
+%\label{app:CepcPhysicsSty}
+%
+%The {\tt cepcphysics.sty} style file implements a series of useful
+%shortcut to typeset a physics paper, such as units or particle
+%symbols. It can included in the preamble of your paper with the usual
+%syntax:
+%
+%\begin{verbatim}
+%  \usepackage{cepcphysics}
+%\end{verbatim}
+%
+%\subsection{Remarks on units and symbols}
+%
+%Use SI units in roman-type font. Leave a \emph{small} space between
+%the value and the units (e.g. 12\,mm), and make sure they end up
+%always together on the same line. \verb|12\,mm| will fulfill both the
+%requirements. Natural units, where $c=\hbar=1$, should be used for all
+%CEPC publications. Masses are therefore in \GeV, not \GeV/$c^2$.
+%
+%Use the shortcut \verb|\GeV{}| (\GeV{}) defined by {\tt
+%cepcphysics.sty} instead of just typing \verb|GeV| (GeV), in order
+%not to leave a large space between the \emph{e} and the
+%\emph{V}. Symbols \verb|\TeV|, \verb|\MeV|, \verb|\keV| and \verb|\eV|
+%also exist. In math mode the symbol leaves a space between the number
+%and the unit, i.e. the beam energy is \verb+$7\TeV$+ ($7\TeV$). The
+%symbol works in text mode and in math mode i.e. \verb+99.0 \MeV+
+%(99.0 \MeV), \verb+$88.4\keV$+ ($88.4\keV$).
+%
+%Use math mode for all symbols (e.g. use $c$ (\verb|$c$|) rather than
+%simply c). Momentum is a lower case \verb+$p$+. Transverse momentum is
+%a lower case $p$ with an upper case $T$ subscript: \verb|\pT| produces
+%\pT. Energy is an upper case \verb+$E$+, \verb+\ET+ produces \ET.  Use
+%\verb|\mathscr| mode for luminosity $\mathscr{L}$ or aplanarity
+%$\mathscr{A}$, including the package \verb|mathrsfs.sty|.
+%
+%Trigonometric functions should be in roman type. Natural logarithm
+%should be ln and log base 10 is log.  When in math mode, use
+%\verb+$\ln$, $\sin$,+ etc. We recommend to specify the base of the
+%logarithm: \verb+$\log_{10}$+.
+%
+%If your note makes use of cones, for example cone-jets, explain that
+%these cones are constructed in $\eta$-$\phi$ space, and define $\eta$.
+%
+%Add the word \emph{events} as the unit when quoting the number of
+%events: ``The resulting background is $4.0 \pm 1.3$ events.''.  The
+%number of expected events should be written as $N_{\rm pred}$ rather
+%than $N_{\rm exp}$, since the latter could also mean experimental.
+%
+%For particle names and symbols, CEPC uses the standards of the
+%Particle Data Book. Intermediate vector bosons should be called
+%\emph{W boson(s)} and \emph{Z boson(s)}, not just \emph{W's} or
+%\emph{Ws}. The Z boson should not have a superscript of 0. W without
+%the word boson attached may be used in \emph{W pair production}, and
+%similar phrases.  Other particle names should be spelled out when used
+%in a sentence: muon(s), electron(s), tau lepton(s). \emph{Top quark}
+%should be used instead of \emph{top} in most places: say ``top quark
+%mass'' instead of ``top mass''.  Top quark and bottom quark may be
+%shortened to \emph{$t$ quark} and \emph{$b$ quark}. The neutrino
+%symbol $\nu$ should not have any subscripts, unless necessary for
+%understanding. For the \Jpsi{} use the command \verb+\Jpsi+ from {\tt
+%cepcphysics.sty}: it will produce a lower case $\psi$.
+%
+%When in doubt, use the PDG style.
+%
+%\subsection{Other shortcuts}
+%
+%\noindent The {\tt cepcphysics.sty} style file contains among
+%other things:
+%
+%\medskip
+%
+%\begin{tabular}{llcllcll}
+%  \verb+\lapprox+ & \lapprox{} & \hspace{1cm} &
+%  \verb+\rapprox+ & \rapprox{}  &\hspace{1cm} &
+%  \verb+\rts+  & \rts{} \\
+%  \verb+\Ecm+ & \Ecm{} & &
+%  \verb+\stat+ & \stat{} & &
+%  \verb+\syst+ & \syst{} \\
+%\end{tabular}
+%
+%\medskip
+%
+%\begin{tabular}{llcllcll}
+%  \verb+\Zboson+ & \Zboson{} & \hspace{5mm} &
+%  \verb+\Wboson+ & \Wboson{} & \hspace{5mm} &
+%  \verb+\Wplus+ & \Wplus{} \\
+%  \verb+\Wminus+ & \Wminus{} & &
+%  \verb+\Wpm+ & \Wpm{} & &
+%  \verb+\Wmp+ & \Wmp{} \\
+%  \verb+\Afb+ & \Afb{} & &
+%  \verb+\GW+ & \GW{} & &
+%  \verb+\GZ+ & \GZ{} \\
+%  \verb+\Wln+ & \Wln{} & &
+%  \verb+\Zll+ & \Zll{} & &
+%  \verb+\Zee+ & \Zee{} \\
+%  \verb+\Zmm+ & \Zmm{} & &
+%  \verb+\mZ+ & \mZ{} \\
+%  \verb+\mW+ & \mW{} & &
+%  \verb+\mH+ & \mH{} \\
+%  \verb+\Mtau+ & \Mtau{} & &
+%  \verb+\swsq+ & \swsq{} & &
+%  \verb+\swel+ & \swel{} \\
+%  \verb+\swsqb+ &  \swsqb{} & &
+%  \verb+\swsqon+ & \swsqon{} & &
+%  \verb+\gv+ &  \gv{} \\
+%  \verb+\ga+ & \ga{} & &
+%  \verb+\gvbar+ & \gvbar{} & &
+%  \verb+\gabar+ & \gabar{} \\
+%  \verb+\Zprime+ & \Zprime{} & &
+%  \verb+\Hboson+ & \Hboson{} & & 
+%  \verb+\GH+ & \GH{} \\
+%\end{tabular}
+%
+%\medskip
+%
+%\noindent The command \verb+\Zzero+ is identical to \verb+\Zboson+.
+%
+%\medskip
+%
+%\begin{tabular}{llcllcll}
+%  \verb+\tbar+ & \tbar{} & \hspace{1cm} &
+%  \verb+\ttbar+ & \ttbar{} & \hspace{1cm} &
+%  \verb+\bbar+ & \bbar{} \\
+%  \verb+\bbbar+ & \bbbar{} & &
+%  \verb+\cbar+ & \cbar{} & &
+%  \verb+\ccbar+ & \ccbar{} \\
+%  \verb+\sbar+ & \sbar{} & &
+%  \verb+\ssbar+ &  \ssbar{} & &
+%  \verb+\ubar+ & \ubar{} \\
+%  \verb+\uubar+ & \uubar{} & &
+%  \verb+\dbar+ & \dbar{} & &
+%  \verb+\ddbar+ & \ddbar{} \\
+%  \verb+\fbar+ & \fbar{} & &
+%  \verb+\ffbar+ &  \ffbar{} & &
+%  \verb+\qbar+ & \qbar{} \\
+%  \verb+\qqbar+ & \qqbar{} & &
+%  \verb+\nbar+ & \nbar{} & &
+%  \verb+\nnbar+ & \nnbar{} \\
+%  % \verb+\e+ & \e{} & &
+%  \verb+\ee+ & \ee{} & &
+%  \verb+\mumu+ & \mumu{} & &
+%  \verb+\tautau+ & \tautau{} \\
+%  \verb+\epm+ & \epm{} & &
+%  % \verb+\epem+ & \epem{} & &
+%  \verb+\leplep+ & \leplep{} & & 
+%  \verb+\lnu+ & \lnu{} \\
+%  % \verb+\ellell+ & \ellell{} & & & \\
+%\end{tabular}
+%
+%\medskip
+%
+%\begin{tabular}{llcllcll}
+%  \verb+\BoBo+ & \BoBo{} & \hspace{1cm} &
+%  \verb+\BodBod+ & \BodBod{} & \hspace{1cm} &
+%  \verb+\BosBos+ & \BosBos{} \\
+%  \verb+\Bd+ & \Bd{} & &
+%  \verb+\Bs+ & \Bs{} & &
+%  \verb+\Bu+ & \Bu{} \\
+%  \verb+\Bc+ & \Bc{} & &
+%  \verb+\Lb+ & \Lb{} & &
+%  \verb+\jpsi+ & \jpsi{} \\
+%  \verb+\Jpsi+ & \Jpsi{} & &
+%  \verb+\Jee+ & \Jee{} & &
+%  \verb+\Jmm+ & \Jmm{} \\
+%  \verb+\psip+ & \psip{} & &
+%  \verb+\kzero+ & \kzero{} & &
+%  \verb+\kzerobar+ & \kzerobar{} \\
+%  \verb+\kaon+ & \kaon{} & &
+%  \verb+\kplus+ & \kplus{} & &
+%  \verb+\kminus+ & \kminus{} \\
+%  \verb+\klong+ & \klong{} & &
+%  \verb+\kshort+ & \kshort{} & &
+%  \verb+\Ups+ & \Ups{} \\
+%\end{tabular}
+%
+%\medskip
+%
+%\begin{tabular}{llcllcllcll}
+%  \verb+\alphas+ & \alphas{} & \hspace{1cm} &
+%  \verb+\Lms+ & \Lms{} & \hspace{1cm} &
+%  \verb+\Lmsfive+ & \Lmsfive{} & \hspace{1cm} &
+%  \verb+\KT+ & \KT{} \\
+%\end{tabular}
+%
+%\medskip
+%
+%\begin{tabular}{llcllcll}
+%  \verb+\Vud+ & \Vud{} & \hspace{1cm} &
+%  \verb+\Vus+ & \Vus{} & \hspace{1cm} &
+%  \verb+\Vub+ & \Vub{} \\
+%  \verb+\Vcd+ & \Vcd{} &  &
+%  \verb+\Vcs+ & \Vcs{} &  &
+%  \verb+\Vcb+ & \Vcb{} \\
+%  \verb+\Vtd+ & \Vtd{} & &
+%  \verb+\Vts+ & \Vts{} & & 
+%  \verb+\Vtb+ & \Vtb{} \\
+%\end{tabular}
+%
+%\medskip
+%
+%\begin{tabular}{llcllcll}
+%  \verb+\Azero+ & \Azero{} & \hspace{1cm} &
+%  \verb+\hzero+ & \hzero{} & \hspace{1cm} &
+%  \verb+\Hzero+ & \Hzero{} \\
+%  \verb+\Hplus+ & \Hplus{} & &
+%  \verb+\Hminus+ & \Hminus{} & &
+%  \verb+\Hpm+ & \Hpm{} \\
+%  % \verb+\Hmp+ \Hmp{}
+%\end{tabular}
+%
+%\medskip
+%
+%\noindent A generic macro \verb+\susy#1+ is defined, so that for
+%example \verb+\susy{q}+ produces \susy{q} and similar.
+%
+%\medskip
+%
+%\begin{tabular}{llcllcll}
+%  \verb+\chinop+ & \chinop{} & \hspace{1cm} &
+%  \verb+\chinotwom+ & \chinotwom{} & \hspace{1cm} &
+%  \verb+\chinopm+ & \chinopm{} \\
+%  \verb+\nino+ & \nino{} & &
+%  \verb+\ninothree+ & \ninothree{} & &
+%  \verb+\gravino+ & \gravino{} \\
+%  \verb+\squark+ & \squark{} & &
+%  \verb+\gluino+ & \gluino{} & &
+%  \verb+\slepton+ & \slepton{} \\
+%  \verb+\stop+ & \stop{} & &
+%  \verb+\stopone+ & \stopone{} & &
+%  \verb+\stopL+ & \stopL{} \\
+%  \verb+\sbottom+ & \sbottom{} & &
+%  \verb+\sbottomtwo+ & \sbottomtwo{} & &
+%  \verb+\sbottomR+ & \sbottomR{} \\
+%  \verb+\sleptonL+ & \sleptonL{} & &
+%  \verb+\sel+ & \sel{} & &
+%  \verb+\smuR+ & \smuR{} \\
+%  \verb+\stauone+ & \stauone{} & &
+%  \verb+\snu+ & \snu{} & &
+%  \verb+\squarkR+ & \squarkR{} \\
+%\end{tabular}
+%
+%\medskip
+%
+%\noindent For \susy{q}, \susy{t}, \susy{b}, \slepton, \sel, \smu and
+%\stau, L and R states are defined; for stop, sbottom and stau also the
+%light (1) and heavy (2) states. There are four neutralinos and two
+%charginos defined, the index number unfortunately needs to be written
+%out completely. For the charginos the last letter(s) indicate(s) the
+%charge: p for +, m for -, and pm for $\pm$.
+%
+%\medskip
+%
+%\begin{tabular}{llcllcll}
+%  \verb+\pt+ & \pt{} & \hspace{1cm} &
+%  \verb+\pT+ & \pT{} & \hspace{1cm} &
+%  \verb+\et+ & \et{} \\
+%  \verb+\eT+ & \eT{} & &
+%  \verb+\ET+ & \ET{} & &
+%  \verb+\HT+ & \HT{} \\
+%  \verb+\ptsq+ & \ptsq{} & &
+%  \verb+\met{}+ & \met{} & &
+%\end{tabular}
+%
+%\medskip
+%
+%\noindent Use \verb+\met{}+ rather than just \verb+\met+ to get the spacing
+%right. In principle this works for any macro, although in most cases it will
+%not be needed as {\tt xspace.sty} will take care of the spacing. Somehow
+%{\tt xspace.sty} doesn't do a good job for \met.
+%
+%\vspace{5mm}
+%
+%\begin{tabular}{llcllcll}
+%\verb+\ifb+ & \ifb{} & \hspace{1cm} &
+%\verb+\ipb+ & \ipb{} & \hspace{1cm} &
+%\verb+\inb+ & \inb{} \\
+%\verb+\TeV+ & \TeV{} & &
+%\verb+\GeV+ & \GeV{} & &
+%\verb+\MeV+ & \MeV{} \\
+%\verb+\keV+ & \keV{} & &
+%\verb+\eV+ & \eV{} & & & \\
+%\end{tabular}
+%
+%\medskip
+%
+%\noindent And \verb+\tev+, \verb+\gev+, \verb+\mev+, \verb+\kev+, and
+%\verb+\ev+ have the same results.
+%
+%\medskip
+%
+%\noindent A generic macro \verb+\mass#1+ is defined, so that for example
+%\verb+\mass{\mu}+ produces \mass{\mu} and similar.
+%\verb+\twomass{\mu e}+ will produce \twomass{\mu e}.
+
+\end{document}
